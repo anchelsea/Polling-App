@@ -12,10 +12,10 @@ import java.util.Optional;
 
 @Repository
 public interface PollRepository extends JpaRepository<Poll,Long> {
-    Optional<Poll> findbyId(Long pollID);
-    Page<Poll> finByCreatedBy(Long userId, Pageable pageale);
+    Optional<Poll> findById(Long pollID);
+    Page<Poll> findByCreatedBy(Long userId, Pageable pageale);
 
-    long contByCreatedBy(Long userId);
+    long countByCreatedBy(Long userId);
     List<Poll> findByIdIn(List<Long> pollIds);
     List<Poll> findByIdIn(List<Long> pollIds, Sort sort);
 }

@@ -7,6 +7,7 @@ import java.util.List;
 
 public class PollResponse {
     private Long id;
+    private String question;
     private List<ChoiceResponse> choices;
     private UserSummary createdBy;
     private Instant creationDateTime;
@@ -23,6 +24,14 @@ public class PollResponse {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
     public List<ChoiceResponse> getChoices() {
